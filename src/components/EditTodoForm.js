@@ -1,5 +1,4 @@
 import { TextField } from "@material-ui/core";
-import { Widgets } from "@material-ui/icons";
 import useInputState from "../hooks/useInputState";
 
 function EditTodoForm({ id, editTodo, task, toggleEditForm }) {

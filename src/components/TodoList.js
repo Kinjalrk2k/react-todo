@@ -1,10 +1,4 @@
-import {
-  Paper,
-  List,
-  ListItem,
-  Divider,
-  ListItemText,
-} from "@material-ui/core";
+import { Paper, List, Divider } from "@material-ui/core";
 import Todo from "./Todo";
 
 function TodoList({ todos, removeTodo, toogleTodo, editTodo }) {
@@ -15,10 +9,8 @@ function TodoList({ todos, removeTodo, toogleTodo, editTodo }) {
           {todos.map((todo, i) => (
             <>
               <Todo
-                id={todo.id}
-                task={todo.task}
+                {...todo}
                 key={todo.id}
-                completed={todo.completed}
                 removeTodo={removeTodo}
                 toogleTodo={toogleTodo}
                 editTodo={editTodo}
