@@ -1,4 +1,5 @@
 import { TextField } from "@material-ui/core";
+import { Widgets } from "@material-ui/icons";
 import useInputState from "../hooks/useInputState";
 
 function EditTodoForm({ id, editTodo, task, toggleEditForm }) {
@@ -12,12 +13,17 @@ function EditTodoForm({ id, editTodo, task, toggleEditForm }) {
         reset();
         toggleEditForm();
       }}
+      style={{
+        marginLeft: "1rem",
+        width: "50%",
+      }}
     >
       <TextField
         margin="normal"
         value={value}
         onChange={handleChange}
         fullWidth
+        autoFocus
       />
     </form>
   );
