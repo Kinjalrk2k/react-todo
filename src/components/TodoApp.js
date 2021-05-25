@@ -5,14 +5,7 @@ import TodoForm from "./TodoForm";
 import useTodoState from "../hooks/useTodoState";
 
 function TodoApp() {
-  const initialTodos = JSON.parse(window.localStorage.getItem("todos") || "[]");
-
-  const { todos, addTodo, toogleTodo, removeTodo, editTodo } =
-    useTodoState(initialTodos);
-
-  useEffect(() => {
-    window.localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
+  const { todos, addTodo, toogleTodo, removeTodo, editTodo } = useTodoState([]);
 
   return (
     <Paper
