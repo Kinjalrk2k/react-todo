@@ -1,6 +1,6 @@
 import { Paper, List, Divider } from "@material-ui/core";
 import { useContext } from "react";
-import { TodosContext } from "../contexts/todosContext";
+import { TodosContext } from "../contexts/todos.context";
 import Todo from "./Todo";
 
 function TodoList() {

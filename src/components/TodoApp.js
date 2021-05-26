@@ -1,7 +1,7 @@
 import { Typography, Paper, AppBar, Toolbar, Grid } from "@material-ui/core";
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
-import { TodosProvider } from "../contexts/todosContext";
+import { TodosProvider } from "../contexts/todos.context";
 
 function TodoApp() {
   return (
