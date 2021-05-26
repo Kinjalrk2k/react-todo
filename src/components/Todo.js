@@ -9,13 +9,13 @@ import {
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import { useContext } from "react";
-import { TodosContext } from "../contexts/todos.context";
+import { DispatchContext } from "../contexts/todos.context";
 import useToggleState from "../hooks/useToggleState";
 import { REMOVE, TOGGLE } from "../reducers/types/todoAction.types";
 import EditTodoForm from "./EditTodoForm";
 
 function Todo({ id, task, completed }) {
-  const { dispatch } = useContext(TodosContext);
+  const dispatch = useContext(DispatchContext);
   const [isEditing, toggleIsEditing] = useToggleState(false);
 
   return (
