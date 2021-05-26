@@ -3,6 +3,7 @@ import { Typography, Paper, AppBar, Toolbar, Grid } from "@material-ui/core";
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
 import useTodoState from "../hooks/useTodoState";
+import { TodosProvider } from "../contexts/todosContext";
 
 function TodoApp() {
   const { todos, addTodo, toogleTodo, removeTodo, editTodo } = useTodoState([]);
@@ -24,13 +25,15 @@ function TodoApp() {
       </AppBar>
       <Grid container justify="center" style={{ marginTop: "1rem" }}>
         <Grid item xs={11} md={8} lg={4}>
-          <TodoForm addTodo={addTodo} />
-          <TodoList
-            todos={todos}
-            removeTodo={removeTodo}
-            toogleTodo={toogleTodo}
-            editTodo={editTodo}
-          />
+          <TodosProvider>
+            <TodoForm addTodo={addTodo} />
+            <TodoList
+              todos={todos}
+              removeTodo={removeTodo}
+              toogleTodo={toogleTodo}
+              editTodo={editTodo}
+            />
+          </TodosProvider>
         </Grid>
       </Grid>
     </Paper>
