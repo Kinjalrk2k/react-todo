@@ -1,6 +1,5 @@
 import { createContext, useReducer } from "react";
 import { v4 as uuid } from "uuid";
-import useTodoState from "../hooks/useTodoState";
 import todoReducer from "../reducers/todo.reducer";
 
 const defaultTodos = [

@@ -8,7 +8,7 @@ import {
 
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import { DispatchContext } from "../contexts/todos.context";
 import useToggleState from "../hooks/useToggleState";
 import { REMOVE, TOGGLE } from "../reducers/types/todoAction.types";
@@ -52,4 +52,4 @@ function Todo({ id, task, completed }) {
   );
 }
 
-export default Todo;
+export default memo(Todo);
